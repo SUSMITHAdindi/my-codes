@@ -20,3 +20,9 @@ else
 System.out.println(num+" is a not harshad number");
 }
 }
+------------------------------------------------------------------------
+  output:
+156
+156 is a harshad number
+22
+22 is a not harshad number
