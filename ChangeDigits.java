@@ -28,3 +28,16 @@ rev/=10;
 System.out.println(n);
 }
 }
+---------------------------------------------------------------
+  output1:
+enter the number
+1234
+4
+5
+1235 //here the digit 4 is replaced with 5
+output2:
+enter the number
+16719
+1
+8
+86789
