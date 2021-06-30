@@ -1,9 +1,11 @@
+import java.util.*;
 class Solution
 {
     public  int subtractProductAndSum(int n)
     {
         int r,s=0,s1=1;
-    
+    if(n>=0&&n<=Math.pow(10,5))
+    {
         while(n>0)
         {
             r=n%10;
@@ -12,6 +14,22 @@ class Solution
             n=n/10;
         }
         
-        return(s1-s);
-        }
+     }
+     return (s1-s);
 }
+public static void main(String args[])
+{
+int a;
+Scanner sc=new Scanner(System.in);
+a=sc.nextInt();
+System.out.println(Solution.subtractProductAndSum(a));
+}
+}
+----------------------------------------------------------
+output:
+Your input
+234
+Output
+15
+Expected
+15
