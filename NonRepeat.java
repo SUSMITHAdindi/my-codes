@@ -12,9 +12,9 @@ class NonRepeat
 	for(int i=0;i<n;i++)
 	{
 		for(int j=i+1;j<n;)
-		{  int q=0;
+		{  
 			if(a[i]==a[j])
-			{    q=j;    
+			{       
                                 c++;
 				for(int k=j;k<n-1;k++)
 				{
@@ -23,7 +23,7 @@ class NonRepeat
 				n--;
 			}
                       if(a[j]==a[i])
-                      j=q;
+                      j=j;
                       else
                       j++;
 		}
