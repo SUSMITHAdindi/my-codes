@@ -11,7 +11,7 @@ class Arr
 	a[i]=sc.nextInt();
 	for(int i=0;i<n;i++)
 	{
-		for(int j=i+1;j<n;j++)
+		for(int j=i+1;j<n;)
 		{
 			if(a[i]==a[j])
 			{
@@ -21,6 +21,10 @@ class Arr
 				}
 				n--;
 			}
+			if(a[j]==a[i])
+			j=j;
+			else
+			j++;
 		}
 	}
 	for(int i=0;i<n;i++)
@@ -32,9 +36,9 @@ OUTPUT1:
 C:\susi>javac Arr.java
 
 C:\susi>java Arr
-8
 3 10 10 3 4 5 4 10
 3 10 4 5
+8
 OUTPUT2:
 C:\susi>java Arr
 3
