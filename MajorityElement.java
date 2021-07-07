@@ -13,9 +13,9 @@ class MajorityElement
 	for(int i=0;i<n;i++)
 	{
 		for(int j=i+1;j<n;)          //majority element is the element which occurs more than n/2 times
-		{  int p=0;
+		{  
 			if(a[i]==a[j])
-			{    p=j;    
+			{       
                                 c++;
 				for(int k=j;k<n-1;k++)
 				{
@@ -24,7 +24,7 @@ class MajorityElement
 				n--;
 			}
                       if(a[j]==a[i])
-                      j=p;
+                      j=j;
                       else
                       j++;
 		}
