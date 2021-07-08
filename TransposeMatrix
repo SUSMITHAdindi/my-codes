@@ -1,0 +1,59 @@
+//Program to display transpose matrix
+import java.io.*;
+import java.util.*;
+public class Main
+{
+    public static void main(String args[])
+    {
+    Scanner sc=new Scanner(System.in);
+    System.out.println("enter row and column size");
+    int r=sc.nextInt();
+    int c=sc.nextInt();
+    int a[][]=new int[r][c];
+    int b[][]=new int[c][r];
+    System.out.println("enter array elements");
+    for(int i=0;i<r;i++)
+    for(int j=0;j<c;j++)
+    a[i][j]=sc.nextInt();
+    for(int i=0;i<r;i++)
+    {
+    for(int j=0;j<c;j++)
+    {
+    b[j][i]=a[i][j];
+    }
+    }
+    System.out.println("Transpose Matrix:");
+    for(int i=0;i<c;i++)
+    {
+    for(int j=0;j<r;j++)
+    {
+    System.out.print(b[i][j]+" ");
+    }
+    System.out.println();
+    }
+    }
+}
+-------------------------------------------------------------------------------------------------------------
+OUTPUT1:
+enter row and column size
+2 3
+enter array elements
+1 2 3 
+4 5 -5
+Transpose Matrix:
+1 4 
+2 5 
+3 -5 
+----------------------------------------------------------------------------------------------------------------------------------
+OUTPUT:
+enter row and column size
+4 3 
+enter array elements
+2  -9  3
+13 11  -17
+3   6  15
+4  13  1
+Transpose Matrix:
+2 13 3 4 
+-9 11 6 13 
+3 -17 15 1 
