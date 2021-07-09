@@ -69,4 +69,20 @@ Second Matrix after swapping
 10  15  13  
 11  8  5  
 9  4  3  
+--------------------------------------------------------------------------------------------------------------------------------
+OUTPUT:
+enter row and column size
+2 3
+enter first Matrix elements
+2 4 5
+6 7 9
+enter Second Matrix Elements
+8 0 1 
+5 7 3
+First Matrix after swapping
+8  0  1  
+5  7  3  
+Second Matrix after swapping
+2  4  5  
+6  7  9  
 
