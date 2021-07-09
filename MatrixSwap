@@ -1,0 +1,72 @@
+//program to swap two matrices
+import java.util.*;
+public class Main
+{
+  public static void display (int x[][])    //Method to display Matrixes after Swapping
+  {
+    int r1 = x.length;
+    int c1 = x[0].length;                      
+    for (int i = 0; i < r1; i++)
+      {
+	for (int j = 0; j < c1; j++)
+	  {
+	    System.out.print (x[i][j] + "  ");
+	  }
+	System.out.println ();
+      }
+  }
+  public static void main (String[]args)
+  {
+    Scanner sc = new Scanner (System.in);
+    System.out.println ("enter row and column size");
+    int r = sc.nextInt ();
+    int c = sc.nextInt ();
+    int a[][] = new int[r][c];
+    int b[][] = new int[r][c];
+    int s, i, j;
+    System.out.println ("enter first Matrix elements");
+    for (i = 0; i < r; i++)
+      for (j = 0; j < c; j++)
+	a[i][j] = sc.nextInt ();	//reading first Matrix
+    System.out.println ("enter Second Matrix Elements");
+    for (i = 0; i < r; i++)
+      for (j = 0; j < c; j++)
+	b[i][j] = sc.nextInt ();	//reading second Matrix
+    for (i = 0; i < r; i++)
+      {
+	for (j = 0; j < c; j++)
+	  {
+	    s = a[i][j];
+	    a[i][j] = b[i][j];	//here we are swapping both matrix elements
+	    b[i][j] = s;
+	  }
+      }
+
+    System.out.println ("First Matrix after swapping");
+    display (a);
+    System.out.println ("Second Matrix after swapping");
+    display (b);
+  }
+
+}
+--------------------------------------------------------------------------------------------------------------
+OUTPUT:
+enter row and column size
+3 3
+enter first Matrix elements
+10  15  13
+11   8   5
+ 9   4   3
+enter Second Matrix Elements
+1   44   6
+87  65  43
+54  91  12
+First Matrix after swapping
+1  44  6  
+87  65  43  
+54  91  12  
+Second Matrix after swapping
+10  15  13  
+11  8  5  
+9  4  3  
+
