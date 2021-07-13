@@ -1,0 +1,24 @@
+import java.util.*;
+public class Main
+{  
+    public static int count(String s)     //this function returns the count of number words in a string
+    {
+        String s1[]=s.split(" ");
+        return s1.length;
+    }
+        
+	public static void main(String[] args) {
+	
+	 Scanner sc=new Scanner(System.in);
+	 System.out.println("enter the string");
+	 String str=new String();
+	 str=sc.nextLine();
+	 System.out.println("number of words in a given string : "+count(str));     //here we are calling the count function
+		
+	}
+}
+------------------------------------------------------------------------------------------------------------------------------
+OUTPUT:
+enter the string
+this is coding class
+number of words in a given string : 4
