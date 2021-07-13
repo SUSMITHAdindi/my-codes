@@ -1,0 +1,34 @@
+//program to sort the string in lexicographically descending order
+import java.util.*;
+public class Main
+{
+ static void ReverseSort (String str)
+  {
+
+    char ch[] = str.toCharArray ();
+    Arrays.sort(ch);
+    String s = "";
+    for (int i = ch.length - 1; i >= 0; i--)
+        s += ch[i];       //lexicographically descending order
+      System.out.println ("The string after sorting in descending order : "+s);
+      
+  }
+  public static void main (String[]args)
+  {
+    String s = new String();
+    Scanner sc=new Scanner(System.in);
+    System.out.println("enter the string");
+    s=sc.nextLine();
+    ReverseSort (s);
+  }
+}
+-----------------------------------------------------------------------------------------------------------------------
+OUTPUT:
+enter the string
+geeks
+The string after sorting in descending order : skgee
+------------------------------------------------------------------------------------------------------------------------
+OUTPUT:
+enter the string
+aditya
+The string after sorting in descending order : ytidaa
