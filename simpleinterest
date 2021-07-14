@@ -1,0 +1,29 @@
+import java.util.*;
+public class Main
+{
+  public static float simpleinterest (float a,float b,float c)
+  {
+    return (a*b*c)/100;
+  }
+  public static void main (String[]args)
+  {
+    Scanner sc = new Scanner (System.in);
+    float p=sc.nextFloat();
+    float t=sc.nextFloat();
+    float r=sc.nextFloat();
+    float i=simpleinterest(p,t,r);
+    System.out.println("simpleinterest is "+i);
+  }
+}
+------------------------------------------------------------------------------------------------------------
+OUTPUT:
+5000     //P value
+2        //t value
+3        //r value
+simpleinterest is 300.0
+-------------------------------------------------------------------------------------------------------------
+OUTPUT:
+28
+45
+2
+simpleinterest is 25.2
