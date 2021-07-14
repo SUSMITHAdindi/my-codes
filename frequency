@@ -33,6 +33,7 @@ Enter Array elements
 5 8 6 4 5 8 7 8 9 5
 enter the element for which you want to know its frequency in array
 5
+the frequency of 5 is 3
 ------------------------------------------------------------------------------------------------------------------------------------
 OUTPUT:
 3
@@ -42,4 +43,4 @@ enter the element for which you want to know its frequency in array
 7
 the frequency of 7 is 0
 
-the frequency of 5 is 3
+
