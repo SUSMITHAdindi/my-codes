@@ -1,0 +1,44 @@
+import java.util.*;
+public class Main
+{
+  public static boolean issubstring (String s1, String s2)
+  {
+    for (int i = 0; i < s1.length (); i++)	//method to check whether given string2 is substring of string1
+      {
+	for (int j = i + 1; j <= s1.length (); j++)
+	  {
+	    if (s1.substring (i, j).equals (s2))
+	      return true;
+	  }
+      }
+    return false;
+  }
+  public static void main (String[]args)
+  {
+    Scanner sc = new Scanner (System.in);
+    String s1 = new String ();
+    String s2 = new String ();
+    System.out.println ("Enter string1");
+    s1 = sc.nextLine ();
+    System.out.println ("enter string2");
+    s2 = sc.nextLine ();
+    if (issubstring (s1, s2))
+      System.out.println ("TRUE");	//if the string2 is substring of string1 it prints true else it prints false
+    else
+      System.out.println ("FALSE");
+  }
+}
+------------------------------------------------------------------------------------------------------------------------------------------------
+OUTPUT1:
+Enter string1
+ADITYA
+enter string2
+DIT
+TRUE
+------------------------------------------------------------------------------------------------------------------------------------------------
+OUTPUT2:
+Enter string1
+ADITYA
+enter string2
+Sri
+FALSE
