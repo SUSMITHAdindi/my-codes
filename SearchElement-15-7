@@ -1,0 +1,42 @@
+import java.util.*;
+public class Main
+{
+  public static void main (String[]args)
+  {
+    Scanner sc = new Scanner (System.in);
+      System.out.println ("Enter n value");
+    int n = sc.nextInt ();
+      ArrayList < Integer > a = new ArrayList < Integer > (n);
+      System.out.println ("Enter elements");
+    for (int i = 0; i < n; i++)
+      {
+	int ele = sc.nextInt ();
+	  a.add (ele);
+      }
+    System.out.println ("enter the element that you want to search");
+    int s = sc.nextInt ();
+    if (a.contains (s))
+      System.out.println ("Element is found");
+    else
+      System.out.println ("Element is not found");
+
+  }
+}
+-------------------------------------------------------------------------------------------
+OUTPUT:
+Enter n value
+5
+Enter elements
+12 3 5 32 7
+enter the element that you want to search
+32
+Element is found
+------------------------------------------------------------------------------------------
+OUTPUT:
+Enter n value
+4
+Enter elements
+1 2 3 4
+enter the element that you want to search
+7
+Element is not found
