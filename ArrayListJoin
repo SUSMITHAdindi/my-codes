@@ -1,0 +1,43 @@
+//program to join two array lists
+import java.util.*;
+public class Main
+{
+  public static void main (String[]args)
+  {
+    Scanner sc = new Scanner (System.in);
+      System.out.println ("Enter  First arraylist size");
+    int n = sc.nextInt ();
+      ArrayList < Integer > a = new ArrayList < Integer > (n);
+    for (int i = 0; i < n; i++)
+      {
+	int ele = sc.nextInt ();
+	  a.add (ele);
+      }
+    System.out.println ("Enter second arraylist size");
+    int n1 = sc.nextInt ();
+    ArrayList < Integer > b = new ArrayList < Integer > (n1);
+
+    for (int i = 0; i < n1; i++)
+      {
+	int ele = sc.nextInt ();
+	b.add (ele);
+      }
+    System.out.println ("First Arraylist : " + a);
+    System.out.println ("Second Arraylist : " + b);
+    a.addAll (b);
+    System.out.print ("After joining two array lists: ");
+    for (int i = 0; i < a.size (); i++)
+      System.out.print (a.get (i) + " ");
+  }
+}
+---------------------------------------------------------------------------------------------------------------------
+OUTPUT:
+Enter  First arraylist size
+4
+45 3 2 1
+Enter second arraylist size
+3
+10 20 30
+First Arraylist : [45, 3, 2, 1]
+Second Arraylist : [10, 20, 30]
+After joining two array lists: 45 3 2 1 10 20 30 
