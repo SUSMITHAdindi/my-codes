@@ -1,0 +1,88 @@
+import java.util.*;
+public class Main
+{
+  public static void main (String[]args)
+  {
+    LinkedList < Integer > L = new LinkedList < Integer > ();
+    Scanner sc = new Scanner (System.in);
+      System.out.println ("Enter number of elements");
+    int n1 = sc.nextInt ();
+    for (int i = 0; i < n1; i++)
+        L.add (sc.nextInt ());
+    int ch, n;
+    do
+      {
+	System.out.println("1.BeginInsert 2.EndInsert 3.PositionInsert 4.BeginDelete 5.EndDelete 6.PositionDelete 7.Display 8.Exit");
+	System.out.println ("Enter your choice");
+	ch = sc.nextInt ();
+	switch (ch)
+	  {
+	  case 1:
+	    System.out.println ("Enter n value");
+	    n = sc.nextInt ();
+	    L.addFirst (n);
+	    break;
+	    case 2:System.out.println ("Enter n value");
+	    n = sc.nextInt ();
+	    L.addLast (n);
+	    break;
+	    case 3:System.out.println ("Enter n value");
+	    n = sc.nextInt ();
+	    System.out.println ("Enter index value");
+	    int ind = sc.nextInt ();
+	      L.add (ind, n);
+	      break;
+	    case 4:L.removeFirst ();
+	      break;
+	    case 5:L.removeLast ();
+	      break;
+	    case 6:System.out.println("Enter the index of the element that you want to remove");
+	      int in = sc.nextInt ();
+	      L.remove (in);
+	      break;
+	    case 7:System.out.println ("Elements in the list are :");
+	    for (int i = 0; i < L.size (); i++)
+	        System.out.print (L.get (i) + " ");
+	      System.out.println ();
+
+
+	  }
+
+      }
+    while (ch != 8);
+  }
+}
+---------------------------------------------------------------------------------------------------------------------
+OUTPUT:
+Enter number of elements
+4
+1 2 3 4
+1.BeginInsert 2.EndInsert 3.PositionInsert 4.BeginDelete 5.EndDelete 6.PositionDelete 7.Display 8.Exit
+Enter your choice
+1
+Enter n value
+10
+1.BeginInsert 2.EndInsert 3.PositionInsert 4.BeginDelete 5.EndDelete 6.PositionDelete 7.Display 8.Exit
+Enter your choice
+2
+Enter n value
+20
+1.BeginInsert 2.EndInsert 3.PositionInsert 4.BeginDelete 5.EndDelete 6.PositionDelete 7.Display 8.Exit
+Enter your choice
+7
+Elements in the list are :
+10 1 2 3 4 20 
+1.BeginInsert 2.EndInsert 3.PositionInsert 4.BeginDelete 5.EndDelete 6.PositionDelete 7.Display 8.Exit
+Enter your choice
+6
+Enter the index of the element that you want to remove
+3
+1.BeginInsert 2.EndInsert 3.PositionInsert 4.BeginDelete 5.EndDelete 6.PositionDelete 7.Display 8.Exit
+Enter your choice
+7
+Elements in the list are :
+10 1 2 4 20 
+1.BeginInsert 2.EndInsert 3.PositionInsert 4.BeginDelete 5.EndDelete 6.PositionDelete 7.Display 8.Exit
+Enter your choice
+8
+
