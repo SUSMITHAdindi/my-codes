@@ -1,0 +1,44 @@
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+		Vector<Integer>v=new Vector<Integer>();
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter number of elements");
+		int n=sc.nextInt();
+		for(int i=0;i<n;i++)
+		v.add(sc.nextInt());
+		System.out.println("Enter element in the array");
+		int ele=sc.nextInt();
+		System.out.println("Enter update Element");
+		int b=sc.nextInt();
+		if(v.contains(ele))
+		{
+		    v.set(v.indexOf(ele),b);
+		    for(int i=0;i<n;i++)
+		    System.out.print(v.get(i)+" ");
+		}
+		else
+		System.out.println("False");
+	}
+}
+-----------------------------------------------------------------------------------------------
+OUTPUT:
+Enter number of elements
+5
+10 20 30 40 50
+Enter element in the array
+20
+Enter update Element
+99
+10 99 30 40 50
+--------------------------------------------------------------------------------------------------
+OUTPUT:
+Enter number of elements
+5
+10 20 30 40 50
+Enter element in the array
+2
+Enter update Element
+99
+False
