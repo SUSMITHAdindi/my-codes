@@ -8,7 +8,7 @@ public class Main
 		int n=sc.nextInt();
 		for(int i=0;i<n;i++)
 		v.add(sc.nextInt());
-		System.out.println("Enter element in the array");
+		System.out.println("Enter element in the vector");
 		int ele=sc.nextInt();
 		System.out.println("Enter update Element");
 		int b=sc.nextInt();
@@ -27,7 +27,7 @@ OUTPUT:
 Enter number of elements
 5
 10 20 30 40 50
-Enter element in the array
+Enter element in the vector
 20
 Enter update Element
 99
@@ -37,7 +37,7 @@ OUTPUT:
 Enter number of elements
 5
 10 20 30 40 50
-Enter element in the array
+Enter element in the vector
 2
 Enter update Element
 99
