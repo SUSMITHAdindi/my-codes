@@ -1,0 +1,42 @@
+import java.util.*;
+public class Main
+{
+  public static boolean repeat (int a[])            //This function returns true if the array contains duplicate values other wise it returns false
+  {
+    Set < Integer > s = new HashSet < Integer > ();
+    for (int i:a)
+      {
+	if (s.add (i) == false)
+	  return true;
+      }
+    return false;
+  }
+  public static void main (String[]args)
+  {
+    Scanner sc = new Scanner (System.in);
+    System.out.println ("enter array size and elements");
+    int n = sc.nextInt ();
+    int a[] = new int[n];
+    for (int i = 0; i < n; i++)
+      a[i] = sc.nextInt ();
+    System.out.println (repeat (a));
+  }
+}
+------------------------------------------------------------------------------------------------------------------------------------
+OUTPUT:
+enter array size and elements
+4
+1 2 3 1
+true
+--------------------------------------------------------------------------------------------------------------------------------------
+OUTPUT:
+enter array size and elements
+4
+1 2 3 4
+false
+---------------------------------------------------------------------------------------------------------------------------------------
+OUTPUT:
+enter array size and elements
+10
+1 1 1 3 3 4 3 2 4 2  
+true
