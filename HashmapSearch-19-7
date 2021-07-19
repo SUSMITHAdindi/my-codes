@@ -1,0 +1,57 @@
+import java.util.*;
+public class Main
+{ 
+public static void Contains(String k[],int arr[])
+{  
+    Scanner s=new Scanner(System.in);
+    HashMap <  String,Integer > h = new HashMap < String,Integer > ();
+    for(int i=0;i<k.length;i++)
+    h.put(k[i],arr[i]);
+    System.out.println("enter the key of the element that you want to search ");
+    String ser=s.next();
+    if(h.containsKey(ser))
+    System.out.println(h.get(ser));
+    else
+    System.out.println("-1");
+    
+ }
+  public static void main (String[]args)
+  {
+    
+    Scanner sc = new Scanner (System.in);
+      System.out.println("enter number pairs of hashmap elements");
+      int n=sc.nextInt();
+      int arr[]=new int[n];
+      String k[]=new String[n];
+      System.out.println("enter keys");
+      for(int i=0;i<n;i++)
+      k[i]=sc.next();
+      System.out.println("enter values corresponding to keys");
+      for(int i=0;i<n;i++)
+      arr[i]=sc.nextInt();
+      Contains(k,arr);
+      
+  }
+}
+---------------------------------------------------------------------------------------------------
+OUTPUT:
+enter number pairs of hashmap elements
+3
+enter keys
+sak varun vijay
+enter values corresponding to keys
+5 7 3
+enter the key of the element that you want to search 
+sak
+5
+---------------------------------------------------------------------------------------------------
+OUTPUT:
+enter number pairs of hashmap elements
+4
+enter keys
+csdb dsh askj adfs
+enter values corresponding to keys
+4 5 8 9
+enter the key of the element that you want to search 
+dptu
+-1
