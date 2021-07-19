@@ -1,0 +1,56 @@
+import java.util.*;
+public class Main
+{
+  public static void frequency (int a[])
+  {
+
+    HashMap < Integer, Integer > h = new HashMap < Integer, Integer > ();
+    for (int i = 0; i < a.length; i++)
+      {
+	if (h.containsKey (a[i]))
+	  h.put (a[i], h.get (a[i]) + 1);
+	else
+	  h.put (a[i], 1);
+      }
+      System.out.println("Below is the frequency of repeated elements");
+    for (Integer i:h.keySet ())
+      {
+	if (h.get (i) > 1)
+	  System.out.println (i + "-->" + h.get (i));
+      }
+  }
+  public static void main (String[]args)
+  {
+
+    Scanner sc = new Scanner (System.in);
+    System.out.println ("enter n value");
+    int n = sc.nextInt ();
+    int a[] = new int[n];
+    System.out.println ("enter elements");
+    for (int i = 0; i < n; i++)
+      a[i] = sc.nextInt ();
+    frequency (a);
+
+
+  }
+}
+
+-----------------------------------------------------------------------------------------------------------------------------------
+OUTPUT:
+enter n value
+12
+enter elements
+2 3 4 5 4 6 4 7 4 5 6 6
+Below is the frequency of repeated elements
+4-->4
+5-->2
+6-->3
+----------------------------------------------------------------------------------------------------------------------------------------
+OUTPUT:
+enter n value
+5
+enter elements
+4 4 5 5 6
+Below is the frequency of repeated elements
+4-->2
+5-->2
