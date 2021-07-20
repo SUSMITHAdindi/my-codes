@@ -1,0 +1,32 @@
+//program to add element to stack from array and displaying the elements in the stack
+import java.util.*;
+public class Main
+{   public static void Addstack(int a[])
+ { 
+     Stack<Integer>st=new Stack<Integer>();
+     for(int i=0;i<a.length;i++)
+     st.push(a[i]);  //inserting elements into stack
+     System.out.println("Elements of the stack are as follows");
+     for(int i:st)
+     System.out.print(i+" ");    //displaying elements of the stack
+ }
+	public static void main(String[] args) {                                                                        
+	    Scanner sc=new Scanner(System.in);                                                       
+	    System.out.println("enter array size");
+	    int n=sc.nextInt();
+		int a[]=new int[n];
+		System.out.println("enter array elements");
+		for(int i=0;i<n;i++)
+		a[i]=sc.nextInt();
+		Addstack(a);
+		
+	}
+}
+---------------------------------------------------------------------------------------------------------
+OUTPUT:
+enter array size
+5
+enter array elements
+11 22 1 2 3
+Elements of the stack are as follows
+11 22 1 2 3
