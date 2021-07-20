@@ -1,0 +1,44 @@
+//program to add elements to stack from array and delete odd numbers from stack and displaying remaining elements
+import java.util.*;
+public class Main
+{
+  public static void Evenstack (int a[])
+  {
+    Stack < Integer > st = new Stack < Integer > ();
+    Stack < Integer > st1 = new Stack < Integer > ();
+    for (int i = 0; i < a.length; i++)
+      st.push (a[i]);
+    while (st.isEmpty () == false)
+      {
+	int e = st.peek ();
+	  st.pop ();
+	if (e % 2 == 0)
+	  st1.push (e);
+      }
+    System.out.println
+      ("Displaying elements from stack after deleting odd numbers");
+  for (int i:st1)
+      System.out.print (i + " ");
+
+  }
+  public static void main (String[]args)
+  {
+    Scanner sc = new Scanner (System.in);
+    System.out.println ("enter array size");
+    int n = sc.nextInt ();
+    int a[] = new int[n];
+    System.out.println ("enter array elements");
+    for (int i = 0; i < n; i++)
+      a[i] = sc.nextInt ();
+    Evenstack (a);
+
+  }
+}
+-------------------------------------------------------------------------------------------------------------------------------------------
+OUTPUT:
+enter array size
+6
+enter array elements
+2 3 4 1 6 10
+Displaying elements from stack after deleting odd numbers
+10 6 4 2 
