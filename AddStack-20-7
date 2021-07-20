@@ -6,9 +6,12 @@ public class Main
      Stack<Integer>st=new Stack<Integer>();
      for(int i=0;i<a.length;i++)
      st.push(a[i]);  //inserting elements into stack
-     System.out.println("Elements of the stack are as follows");
-     for(int i:st)
-     System.out.print(i+" ");    //displaying elements of the stack
+     System.out.println("Elements of the stack are as follows");                      //if you want to display elements from top then we will use the following code:
+     for(int i:st)                                                                     //  while (st.isEmpty () == false)
+      System.out.print(i+" ");    //displaying elements of the stack                   //   {                                                             {
+	                                                                               //    System.out.print (st.peek () + " ");
+	                                                                               //     st.pop ();
+										       //    }                                                                                           
  }
 	public static void main(String[] args) {                                                                        
 	    Scanner sc=new Scanner(System.in);                                                       
