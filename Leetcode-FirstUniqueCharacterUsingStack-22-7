@@ -1,0 +1,54 @@
+LEETCODE LINK: https://leetcode.com/problems/first-unique-character-in-a-string/
+class Solution {
+    public int firstUniqChar(String s) {
+       Stack<Character> st=new Stack<Character>();
+        Stack<Character> st1=new Stack<Character>();
+         Stack<Character> st3=new Stack<Character>();
+       
+        st.push(s.charAt(0));
+        for(int i=1;i<s.length();i++)
+        {
+            while(st.empty()==false)
+            {
+                if(st.peek()==s.charAt(i))
+                {   st3.push(st.peek());
+                    st.pop();
+                    
+                    break;
+                }
+                else
+                {
+                   st1.push(st.peek());
+                    st.pop();
+                    
+                }
+            }
+            
+            if(st3.contains(s.charAt(i))==false)
+            st.push(s.charAt(i));
+            st.addAll(st1);
+            st1.clear();
+        }
+        if(st.empty())
+            return -1;
+        int e=st.peek();
+        st.pop();
+        while(!st.empty())
+        {
+        if(s.indexOf(st.peek())<s.indexOf(e))
+        e=st.peek();
+        st.pop();
+        }
+        
+        
+        return s.indexOf(e);
+    }
+}
+-----------------------------------------------------------------------------------------------------------------------------------------
+OUTPUT:
+Your input
+"leetcode"
+Output
+0
+Expected
+0
