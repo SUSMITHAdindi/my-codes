@@ -1,0 +1,57 @@
+//LEETCODE LINK:https://leetcode.com/problems/implement-queue-using-stacks/
+class MyQueue {
+      Stack<Integer>st;
+    /** Initialize your data structure here. */
+   
+    public MyQueue() {
+         
+        st=new Stack<Integer>();
+    }
+    
+    /** Push element x to the back of queue. */
+    public void push(int x) {
+        st.push(x);
+    }
+    
+    /** Removes the element from in front of queue and returns that element. */
+    public int pop() {
+    
+        int e=st.get(0);
+        st.removeElementAt(0);
+        return e;
+        
+    }
+    
+    /** Get the front element. */
+    public int peek() {
+        return st.get(0);
+        
+    }
+    
+    /** Returns whether the queue is empty. */
+    public boolean empty() {
+        if(st.empty())
+            return true;
+        else
+            return false;
+        
+    }
+}
+
+/**
+ * Your MyQueue object will be instantiated and called as such:
+ * MyQueue obj = new MyQueue();
+ * obj.push(x);
+ * int param_2 = obj.pop();
+ * int param_3 = obj.peek();
+ * boolean param_4 = obj.empty();
+ */
+ ---------------------------------------------------------------------------------------------------------------------------------------
+ OUTPUT:
+ Your input
+["MyQueue","push","push","peek","pop","empty"]
+[[],[1],[2],[],[],[]]
+Output
+[null,null,null,1,1,false]
+Expected
+[null,null,null,1,1,false]
