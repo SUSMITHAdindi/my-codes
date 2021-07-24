@@ -1,0 +1,34 @@
+//concatinating two strings and reversing that string
+import java.util.*;
+class Solution {
+    static String conRevstr(String S1, String S2) {
+        // code here
+       
+        StringBuffer s=new StringBuffer( S1.concat(S2));
+         s.reverse();
+        String s3=s.toString();
+        return s3;
+    }
+    public static void main(String args[])
+    {   
+        Scanner sc=new Scanner(System.in);
+        String S1=new String();
+        String S2=new String();
+        System.out.println("Enter two Strings");
+        S1=sc.next();
+        S2=sc.next();
+        System.out.println(conRevstr(S1,S2));
+        
+    }
+}
+----------------------------------------------------------------------------------------------
+OUTPUT:
+Enter two Strings
+Hello
+World
+dlroWolleH   //After concatinating the given two strings, we have reversed the string
+-----------------------------------------------------------------------------------------------
+OUTPUT:
+Geeks
+forGeeks
+skeeGrofskeeG
