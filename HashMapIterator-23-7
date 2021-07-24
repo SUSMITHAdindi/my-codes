@@ -1,0 +1,48 @@
+//program to iterate a hashmap
+import java.util.*;
+public class Main
+{   
+    public static void hashmapiterator(String a[],int k[],int n)
+    {
+        HashMap <String,Integer>m=new HashMap<String,Integer>();
+        for(int i=0;i<n;i++)
+        m.put(a[i],k[i]);
+        Iterator<String> it=m.keySet().iterator();
+        System.out.println("fruit name and its count ");
+        while(it.hasNext())
+        {
+            String in=it.next();
+            System.out.print(in+" : "+m.get(in));
+            System.out.println();
+        }
+        
+    }
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter number of hash pairs");
+		int n=sc.nextInt();
+		System.out.println("enter fruit names");
+		String a[]=new String[n];
+		for(int i=0;i<n;i++)
+		a[i]=sc.next();
+		int k[]=new int[n];
+		System.out.println("enter count of each fruits");
+		for(int i=0;i<n;i++)
+		k[i]=sc.nextInt();
+		
+		hashmapiterator(a,k,n);
+	}
+}
+--------------------------------------------------------------------------------------------------------------------------------------------------------
+OUTPUT:
+Enter number of hash pairs
+4
+enter fruit names
+Apple Banana Grapes Pineapple
+enter count of each fruits
+4 5 6 4
+fruit name and its count 
+Apple : 4
+Grapes : 6
+Pineapple : 4
+Banana : 5
