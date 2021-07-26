@@ -1,0 +1,34 @@
+class Solution {
+    public int trailingZeroes(int n) {
+        long f=1;
+        int c=0;
+        if(n==0)
+            return 0;
+        for(int i=n;i>=1;i--)
+            f*=i;
+        while(f>0)
+        {
+          long r=f%10;
+            if(r==0)
+                c++;
+            else
+                break;
+            f/=10;
+            
+        }
+        return c;
+    }
+}
+---------------------------------------------------------------------------------------------------------------------------
+Your input
+3
+5
+0
+Output
+0
+1
+0
+Expected
+0
+1
+0
