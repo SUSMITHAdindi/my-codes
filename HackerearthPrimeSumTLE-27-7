@@ -9,7 +9,7 @@ class TestClass {
          a[i]=true;
          a[0]=false;
          a[1]=false;
-         for(int i=2;i*i<n;i++)
+         for(int i=2;i*i<=n;i++)
          {
              if(a[i]==true)
              {
