@@ -1,0 +1,58 @@
+/*Given a numbers n, print no.of prime factor among all prime factors of n. 
+For example, if the input number is 15 then output should be 2.
+ And if , then output should be “-1”  */
+ ----------------------------------------------------------------------------------------------------------------------------------------------------
+ import java.util.*;
+public class Main
+{
+  static int n = 100000;
+  static int a[] = new int[n + 1];
+  public static void seive ()
+  {
+    for (int i = 0; i <= n; i++)
+      a[i] = i;
+    a[0] = 1;
+    a[1] = 1;
+    for (int i = 2; i * i <= n; i++)
+      {
+	if (a[i] == i)
+	  {
+	    for (int j = i * i; j <= n; j = j + i)
+	      a[j] = i;
+	  }
+      }
+
+  }
+  public static void main (String args[])
+  {
+    int f[] = new int[10000];
+    int k = 0;
+    seive ();
+    Scanner sc = new Scanner (System.in);
+    System.out.println ("Enter a number");
+    int num = sc.nextInt ();
+   if(num<2)
+   System.out.println("-1");
+   else
+   {
+    while (num != 1)
+      {
+	f[k] = a[num];
+	k++;
+	num /= a[num];
+      }
+
+    System.out.println (k);
+   }
+  }
+}
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+OUTPUT1:
+Enter a number
+225
+4        //225 has 4 prime factors
+OUTPUT2:
+Enter a number
+9
+2    //9 has 2 prime factors 3,3
+
