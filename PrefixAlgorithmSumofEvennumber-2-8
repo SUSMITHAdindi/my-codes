@@ -1,0 +1,33 @@
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner sc=new Scanner(System.in);
+	    
+		int j=0,s=0;
+		int a[]=new int[1001];
+		for(int i=1;i<1001;i++)
+		{
+		j=i*2;
+		a[i]=j+a[i-1]; 
+		}
+       System.out.println("Enter number of testcases");
+       int t=sc.nextInt();
+       while(t>0)
+       { 
+           int n=sc.nextInt();
+		System.out.println("The sum of first " +n+" even numbers is " +a[n]);
+		t--;
+       }
+	}
+}
+-------------------------------------------------------------------------------------------------------------------
+OUTPUT:
+Enter number of testcases
+3
+4
+The sum of first 4 even numbers is 20
+10
+The sum of first 10 even numbers is 110
+20
+The sum of first 20 even numbers is 420
