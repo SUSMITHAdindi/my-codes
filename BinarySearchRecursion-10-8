@@ -1,0 +1,41 @@
+
+import  java.util.*;
+public class Main
+{   
+	public static void main(String[] args) {         
+		Scanner sc=new Scanner(System.in); 
+		int n=sc.nextInt();
+		int a[]=new int[n];
+		for(int i=0;i<n;i++)
+		a[i]=sc.nextInt();
+		System.out.println("Enter search element");
+		int ele=sc.nextInt();
+        int c=BinarySearch(a,ele,0,n-1);
+        if(c==-1) System.out.println("element is not found");
+        else System.out.println("Element is found at the index "+c);
+	}
+	public static int BinarySearch(int ar[],int e, int l,int h)
+	{
+	    
+	    int mid=(l+h)/2;
+	    if(ar[mid]==e) return mid;
+	    if(l>h) return -1;
+	    if(e>ar[mid]) return BinarySearch(ar,e,mid+1,h);  //BINARY SEARCH USING RECURSION
+	     return BinarySearch(ar,e,l,mid-1);
+	    
+	}
+}
+----------------------------------------------------------------------------------------------------------------------------------------------------
+OUTPUT:
+8
+11 22 33 43 55 65 76 89
+Enter search element
+43
+Element is found at the index 3
+----------------------------------------------------------------------------------------------------------------------------------------------------
+OUTPUT:
+8
+11 22 33 43 56 65 77 88
+Enter search element
+21
+element is not found
