@@ -46,4 +46,4 @@ OUTPUT:
 Array elements before Sorting : 
 4 18 1 16 2 16 21 13 
 After Sorting in descending order : 
-21 18 16 16 13 4 1 2
+21 18 16 16 13 4 2 1
