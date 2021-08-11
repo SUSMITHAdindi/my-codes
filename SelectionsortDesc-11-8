@@ -47,3 +47,11 @@ Array elements before Sorting :
 3 2 55 1 18 
 After Sorting in descending order Using selection sort : 
 55 18 3 2 1 
+-----------------------------------------------------------------------------------------------------------------------------------
+OUTPUT:
+8
+45 8 14 1 52 16 2 10
+Array elements before Sorting : 
+45 8 14 1 52 16 2 10 
+After Sorting in descending order Using selection sort : 
+52 45 16 14 10 8 2 1 
