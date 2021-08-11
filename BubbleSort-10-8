@@ -14,7 +14,7 @@ public class Main
 		    for(int j=0;j<n-1;j++)
 		    {
 		        if(a[j]>a[j+1])
-		        {                                                //MERGE SORT
+		        {                                                //Bubble Sort
 		            int t=a[j];
 		            a[j]=a[j+1];
 		            a[j+1]=t;
@@ -37,3 +37,11 @@ Array elements before Sorting :
 3 2 45 1 22 21 
 After Sorting : 
 1 2 3 21 22 45 
+--------------------------------------------------------------------------------------------------------------------------------
+OUTPUT:
+9
+14 11 13 8 10 12 8 2 6
+Array elements before Sorting : 
+14 11 13 8 10 12 8 2 6 
+After Sorting : 
+2 6 8 8 10 11 12 13 14 
