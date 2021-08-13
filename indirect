@@ -1,0 +1,28 @@
+import java.util.*;
+class IndirectRecursion
+{
+public static void main(String args[])
+{
+Scanner sc=new Scanner(System.in);
+int n=sc.nextInt();
+funA(n);
+}
+static void funA(int n)
+{
+if(n>0)
+{
+funB(n);
+}
+System.out.print(n+" ");
+}
+static void funB(int n)
+{
+if(n>1)
+{
+funA(n-1);
+}
+}
+}-------------------------------------------------------------------------
+OUTPUT:
+6
+1 2 3 4 5 6
