@@ -7,15 +7,15 @@ public static void main(String args[])
 Scanner sc=new Scanner(System.in);
  n=sc.nextInt();
 System.out.print(0+" "+1+" ");
-fact(0,1);
+fib(0,1);
 }
-static void fact(int f1,int f2)
+static void fib(int f1,int f2)
 {
 int f3=f1+f2;
 if(f3<=n)
 {
 System.out.print(f3+" ");
-fact(f2,f3);
+fib(f2,f3);
 }
 }
 }
