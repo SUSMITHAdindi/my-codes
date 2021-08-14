@@ -15,9 +15,7 @@ static boolean prime(int i,int n)
 {
 if(n==2||i>n/2)
 return true;
-if(n<2)
-return false;
-if(i>n/2||n%i==0)
+if(n<2||n%i==0)
 return false;
 return prime(i+1,n);
 }
