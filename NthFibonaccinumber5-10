@@ -1,0 +1,29 @@
+//program to print nth fibonacci number
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	int f1=0,f2=1,f3=0,n;
+	Scanner sc=new Scanner(System.in);
+    System.out.println("Enter n value");
+    n=sc.nextInt();
+    if(n==1)
+    System.out.println(n+"th fibonacci number is "+f1);
+    else if(n==2)
+    System.out.println(n+"th fibonacci number is "+f2);
+    else{
+    for(int i=3;i<=n;i++)
+    {
+        f3=f1+f2;
+        f1=f2;
+        f2=f3;
+    }
+	System.out.println(n+"th fibonacci number is "+f3);
+	}
+	}
+}
+--------------------------------------------------------------------------------------------------------
+OUTPUT:
+Enter n value
+5
+5th fibonacci number is 3
