@@ -1,0 +1,34 @@
+//Sum of first n even numbers
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	int q,n,sum;
+	Scanner sc=new Scanner(System.in);
+	System.out.println("enter number of queries");
+	q=sc.nextInt();
+	while(q>0)
+	{
+	    System.out.println("Enter n value");
+	    n=sc.nextInt();
+	    sum=0;
+	    for(int i=1;i<=n;i++)
+	    {
+	        sum=sum+(i*2);
+	    }
+	    System.out.println("sum of first "+n+" even numbers : "+sum );
+	    q--;
+	}
+	
+	}
+}
+----------------------------------------------------------------------------------------------
+OUTPUT:
+enter number of queries
+2
+Enter n value
+2
+sum of first 2 even numbers : 6
+Enter n value
+5
+sum of first 5 even numbers : 30
